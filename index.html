@@ -48,10 +48,10 @@
                 <p class="text-base font-medium text-gray-900">
                   Try it out at your Shopify store!
                 </p>
-                <form action="#" method="POST" class="mt-3 sm:flex">
+                <form onsubmit="return false;" class="mt-3 sm:flex">
                   <label for="store" class="sr-only">Shopify store URL</label>
                   <input type="text" name="store" id="store" class="block w-full py-3 px-2 text-base rounded-md placeholder-gray-500 shadow-lg focus:ring-blue-500 focus:border-blue-500 sm:flex-1 border-gray-300" placeholder="yourstore.myshopify.com">
-                  <button type="submit" class="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
+                  <button type="submit" onclick="install()" class="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
                     Install
                   </button>
                 </form>
@@ -81,5 +81,11 @@
         </main>
       </div>
     </div>
+    <script>
+      function install(){
+        let shop = document.getElementById('store').value;
+        window.location.href = 'https://app.cancellable.app/login?shop=' + shop;
+      }
+    </script>
   </body>
 </html>
