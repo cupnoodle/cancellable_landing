@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="tailwind.css" rel="stylesheet">
+    <title>Cancellable.app - Uninstallation Guide</title>
+  </head>
+  <body>
+    <div class="relative py-16 bg-white overflow-hidden">
+      <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
+        <div class="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
+          <svg class="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
+            <defs>
+              <pattern id="74b3fd99-0a6f-4271-bef2-e80eeafdf357" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="384" fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)" />
+          </svg>
+          <svg class="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
+            <defs>
+              <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f49" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="384" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
+          </svg>
+          <svg class="absolute bottom-12 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
+            <defs>
+              <pattern id="d3eb07ae-5182-43e6-857d-35c643af9034" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="384" fill="url(#d3eb07ae-5182-43e6-857d-35c643af9034)" />
+          </svg>
+        </div>
+      </div>
+      <div class="relative px-4 sm:px-6 lg:px-8">
+        <div class="text-lg max-w-prose mx-auto">
+          <h1>
+            <!-- <span class="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase">Introducing</span> -->
+            <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Uninstall Guide</span>
+          </h1>
+          <p class="mt-8 text-xl text-gray-500 leading-8">
+            This page provides instruction on how to remove Cancellable app related code from your Shopify store's theme and checkout page. If you have any problem with the instruction, please email axel@cancellable.app for help.
+            <br>
+            <br>
+            <a href="#step_one" class="text-blue-500" style="text-decoration: underline;">Step 1 : Remove the code from Additional scripts field in Checkout Settings</a>
+            <br>
+            <a href="#step_twoa" class="text-blue-500" style="text-decoration: underline;">Step 2A : Remove the code from Customer account page (Automated install)</a>
+            <br>
+            <a href="#step_twom" class="text-blue-500" style="text-decoration: underline;">Step 2M : Remove the code from Customer account page (Manual install)</a>
+          </p>
+          <article class="mt-8 text-xl text-gray-500 leading-8">
+            <h3 class="text-2xl font-semibold" id="step_one">Step 1 : Remove the code from Additional scripts field in Checkout Settings</h3>
+            <br>
+            Open your Shopify store, click <strong>'Settings'</strong>, select <strong>'Checkout'</strong>, and scroll down to <strong>Order processing</strong> section, 
+            <br><br>
+            <img src="additional_script.png" style="max-width: 100%;"/>
+            <br><br>
+            then remove the code shown below in the <strong>Additional scripts</strong> field, and click 'Save'.
+            <br><br>
+            <img src="order_status_setup.png" style="max-width: 100%"/>
+            <br><br><br>
+
+            <h3 class="text-2xl font-semibold" id="step_twoa">Step 2A : Remove the code from Customer account page (Automated install)</h3>
+            <br>
+            If you have used Automated Installation to install the code, you will need to go to your store theme, click <strong>'Actions'</strong> and select <strong>'Edit code'</strong> 
+            <br><br>
+            <img src="edit_code.png" style="max-width: 100%"/>
+            <br><br>
+            Then find and open the <strong>customers/account.liquid</strong> file in the code editor.
+            <br><br>
+            <img src="customer_account.png" style="max-width: 100%"/>
+            <br><br>
+            Then remove the code blocks that contains :
+            <br><br>
+            <pre>
+&lt;!-- Start Cancellable app automated installation code --&gt;
+....
+&lt;!-- end Cancellable app automated installation code --&gt;
+            </pre>
+            <br>
+            (Remove the code shown inside the red rectangle below)
+            <br><br>
+            <img src="auto_remove_1.png" style="max-width: 100%"/>
+            <br>
+            <img src="auto_remove_2.png" style="max-width: 100%"/>
+
+            <br><br>
+            <h3 class="text-2xl font-semibold" id="step_twom">Step 2M : Remove the code from Customer account page (Manual install)</h3>
+            <br>
+            If you have used Manual Installation to install the code, you will need to go to your store theme, click <strong>'Actions'</strong> and select <strong>'Edit code'</strong> 
+            <br><br>
+            <img src="edit_code.png" style="max-width: 100%"/>
+            <br><br>
+            Then find and open the <strong>customers/account.liquid</strong> file in the code editor.
+            <br><br>
+            <img src="customer_account.png" style="max-width: 100%"/>
+            <br><br>
+            Then remove the code as instructed below :
+            <br><br>
+            <img src="manual_remove.png" style="max-width: 100%"/>
+
+            <br><br>
+
+            Thats it! Thanks for giving Cancellable app a try.
+
+            If you have questions, please contact me by e-mail at <strong>axel@cancellable.app</strong>.
+          </article>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
